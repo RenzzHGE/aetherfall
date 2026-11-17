@@ -1,0 +1,13 @@
+Build a make.fun best-game-01 entry called AETHERFALL: a polished roguelike arena survival game in plain JavaScript + Canvas, offline static files, desktop Chrome, keyboard + mouse.
+
+You are a lone warden in a floating arena. Waves of enemies spawn from the edges and hunt you. Survive, collect shards from kills, spend them between waves on upgrades, beat the boss every 5 waves. Score = waves cleared + kills + time survived. Game over at 0 HP; localStorage best score + best wave.
+
+Controls: WASD/arrows move, mouse aims, click/hold to shoot (twin-stick), Space dash (short invulnerability, cooldown), 1/2/3 switch weapons once unlocked. Enemies: chasers (fast, weak), brutes (slow, tanky), spitters (ranged), and a boss every 5 waves (radial shots, charge, summons). Enemy HP/speed scale with wave.
+
+Upgrades (between waves, pick 1 of 3 cards): damage +25%, fire rate +20%, move speed +15%, max HP +25, dash cooldown -25%, multishot +1 projectile, piercing shots, lifesteal on kill, magnet radius, shield that blocks one hit per wave, plus two extra weapons to unlock (Scattergun, Rail Lance).
+
+Juice matters most: particle explosions on kill, screen shake on damage/boss hits, hit flash, floating damage numbers, kill combo counter with multiplier, wave banner, slow-mo on boss death, WebAudio synth SFX + M mute, P pause. Parallax starfield background, glowing neon palette, vignette.
+
+HUD: HP bar, wave, score, combo, shards, dash cooldown, weapon, boss HP bar when active, upgrade cards between waves. Start screen (title, controls, best score), pause, game-over screen (score, wave, best, restart).
+
+Files: game/index.html + game/src/*.js (modules: config, utils, audio, input, player, enemies, upgrades, particles, world, render, shots, main). Plain JS, no build step, no network requests. main.ts at repo root copies game/ + screenshots/ to /output and writes /output/dossier.json via vendor/makefun-game.ts. LICENSE MIT, README with the three best-game-01 badges, prompt.txt, .makefun/owner.json. 4 real screenshots (1280x720, under 256 KiB each): title, mid-combat with particles + combo, upgrade cards between waves, boss fight.
